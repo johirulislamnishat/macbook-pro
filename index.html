@@ -6,10 +6,145 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome To Mac Shop</title>
+
+    <!-- bootstrap styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- main styles -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
+    <!-- header start -->
+    <header>
 
+    </header>
+
+    <!-- main start  -->
+    <main>
+
+        <section class="mt-5">
+            <div class="container">
+                <div class="row d-flex">
+
+                    <!-- product image -->
+                    <div class="col-md-6">
+                        <img class="img-fluid" src="images/mac.png" alt="">
+                    </div>
+
+                    <!-- product content -->
+                    <div class="col-md-6">
+                        <div>
+                            <h2>Apple IMac 2021 (24-Inch, Apple M1 Chip With 7‑Core GPU, 8GB RAM, 256GB)</h2>
+                            <p>
+                                Experience the power and performance of the Apple M1 Chip with the Apple 24" iMac. The
+                                Apple M1 integrates the CPU, GPU, Neural Engine, I/O, and more into a single system on a
+                                chip (SoC). Tackle your projects with the fast 8-Core CPU and take on graphics-intensive
+                                apps and games with the 7-Core GPU.
+                            </p>
+
+                            <div class="mt-4">
+                                <h4>Memory</h4>
+                                <button id="memoryBtn-1">8 GB Unified Memory</button>
+                                <button id="memoryBtn-2">16 GB Unified Memory</button>
+                            </div>
+                            <div class="mt-4">
+                                <h4>Storage</h4>
+                                <button id="storageBtn-1">256 GB SSD Storage</button>
+                                <button id="storageBtn-2">512 GB SSD Storage</button>
+                                <button id="storageBtn-3">1 TB SSD Storage</button>
+
+                            </div>
+                            <div class="mt-4">
+                                <h4>Choose your delivery option</h4>
+                                <button id="deliveryBtn-1">Friday, Aug 25 Free Prime Delivery</button>
+                                <button id="deliveryBtn-2">Friday, Aug 21 Delivery Charge $20</button>
+                            </div>
+
+                            <!-- price calculation -->
+
+                            <div class="row d-flex mt-5">
+                                <div class="col-6">
+                                    <h4>Best Price:</h4>
+                                </div>
+                                <div class="col-6">
+                                    <h4>$<span id="bestPrice">1299</span></h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row d-flex">
+                                <div class="col-6">
+                                    <h4>Extra Memory Cost:</h4>
+                                </div>
+                                <div class="col-6">
+                                    <h4>$<span id="extraMemoryCost">0</span></h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row d-flex">
+                                <div class="col-6">
+                                    <h4>Extra Storage Cost:</h4>
+                                </div>
+                                <div class="col-6">
+                                    <h4>$<span id="storageCost">0</span></h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row d-flex">
+                                <div class="col-6">
+                                    <h4>Delivery Cost:</h4>
+                                </div>
+                                <div class="col-6">
+                                    <h4>$<span id="deliveryCost">0</span></h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row d-flex">
+                                <div class="col-6">
+                                    <h4>Total Price:</h4>
+                                </div>
+                                <div class="col-6">
+                                    <h4>$<span id="totalPrice">1299</span></h4>
+                                </div>
+                            </div>
+                            <hr>
+
+                        </div>
+
+                        <!-- price calculation end -->
+                        <div>
+                            <h4>Add Promo Code</h4>
+                            <input type="text" name="" id="cuponInput">
+                            <button id="cuponApply">Apply</button>
+                        </div>
+
+                    </div>
+                </div>
+                <hr class="mt-5">
+                <div class="d-flex justify-content-center mt-2">
+                    <h4>Total:</h4>
+                    <h4 class="ps-4">$<span>1299</span></h4>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    <!-- footer start  -->
+    <footer>
+
+    </footer>
+
+    <!-- boostrap script -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- main script  -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
