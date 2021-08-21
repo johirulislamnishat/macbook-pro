@@ -1,38 +1,39 @@
-/* memory getElement */
-const memoryCost = document.getElementById('extraMemoryCost');
 
 // memory cost
 document.getElementById('memoryBtn-1').addEventListener('click', function () {
     //8GB Cost
+    const memoryCost = document.getElementById('extraMemoryCost');
     memoryCost.innerText = 0;
     total();
 })
 
 document.getElementById('memoryBtn-2').addEventListener('click', function () {
     // 16GB Cost
+    const memoryCost = document.getElementById('extraMemoryCost');
     memoryCost.innerText = 180;
     total();
 })
 
-/* storage getElement */
-const storage = document.getElementById('storageCost');
 
 // storage
 document.getElementById('storageBtn-1').addEventListener('click', function () {
 
     // 256GB SSD
+    const storage = document.getElementById('storageCost');
     storage.innerText = 0;
     total();
 })
 document.getElementById('storageBtn-2').addEventListener('click', function () {
 
     // 512GB SSD
+    const storage = document.getElementById('storageCost');
     storage.innerText = 100;
     total();
 })
 document.getElementById('storageBtn-3').addEventListener('click', function () {
 
     // 1TB SSD
+    const storage = document.getElementById('storageCost');
     storage.innerText = 180;
     total();
 })
@@ -44,37 +45,56 @@ const delivery = document.getElementById('deliveryCost');
 document.getElementById('deliveryBtn-1').addEventListener('click', function () {
 
     //free delivery
+    const delivery = document.getElementById('deliveryCost');
     delivery.innerText = 0;
     total();
 })
 document.getElementById('deliveryBtn-2').addEventListener('click', function () {
 
     //premium delivery
+    const delivery = document.getElementById('deliveryCost');
     delivery.innerText = 20;
     total();
 })
 
 /* total getElement */
-const priceTotal = document.getElementById('totalPrice');
+let priceTotal = document.getElementById('totalPrice');
 // total price
 function total() {
 
-    const memoryPrice = Number(memoryCost.innerText);
-    const storagePrice = Number(storage.innerText);
-    const deliveryPrice = Number(delivery.innerText);
+    const memoryCost = document.getElementById('extraMemoryCost');
+    const storage = document.getElementById('storageCost');
+    let priceTotal = document.getElementById('totalPrice');
+    const bestAmount = document.getElementById('bestPrice');
+
+    const bestAmountText = parseInt(bestAmount.innerText);
+    const memoryPrice = parseInt(memoryCost.innerText);
+    const storagePrice = parseInt(storage.innerText);
+    const deliveryPrice = parseInt(delivery.innerText);
 
     // price update
-    const price = Number(priceTotal.innerText);
 
-    // console.log(memoryPrice + storagePrice + price);
-    const sum = memoryPrice + storagePrice + deliveryPrice + price;
+    const sum = memoryPrice + storagePrice + bestAmountText + deliveryPrice;
     priceTotal.innerText = sum;
+
+
+    // grandTotal
+    document.getElementById('subTotal').innerText = sum;
+
 }
 
 // cuponCode
 document.getElementById('cuponApply').addEventListener('click', function () {
+    let grandTotal = document.getElementById('subTotal');
+    let totalAmount = Number(grandTotal.innerText)
+    let cupon = document.getElementById('cuponInput');
+    let cuponValue = cupon.value;
 
-    const cupon = document.getElementById('cuponInput');
+
+
+    if (cuponValue == 'stevekaku') {
+        let discount = (totalAmount / 100) * 20;
+        grandTotal.innerText = totalAmount - discount;
+    }
+    cupon.value = '';
 })
-
-// grandTotal
